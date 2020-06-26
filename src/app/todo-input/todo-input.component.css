@@ -1,0 +1,20 @@
+.todo-input-div {
+    width: 50%;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 4px 8px #eee;
+    margin-top: 1%;
+}
+
+.todo-input-cls {
+    position: relative;
+    margin: 0;
+    width: 90%;
+    font-size: 24px;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: 1.4em;
+    color: inherit;
+    padding: 16px 16px 16px 60px;
+    border: none;
+}

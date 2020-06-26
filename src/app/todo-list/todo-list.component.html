@@ -1,0 +1,12 @@
+<div class="todo-list-main" *ngIf="todos.length > 0">
+    <ul class="todo-list">
+      <li *ngFor="let todo of todos" [class.completed]="todo.complete">
+        <div class="view">
+          <input class="toggle" type="checkbox" (click)="toggleTodoComplete(todo.id)" [checked]="todo.complete">
+          <label class="todo-title" [ngClass]="{'todo-done': todo.complete}" >{{todo.title}}</label>
+          <button class="delete-todo" (click)="removeTodo(todo.id)">X</button>
+          <a class="todo-edit" (click)="editTodo(todo)">Edit</a>
+        </div>
+      </li>
+    </ul>
+</div>

@@ -1,0 +1,71 @@
+
+
+.todo-list-main {
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+/* Remove margins and padding from the list */
+ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the list items */
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #f9f9f9;
+    font-size: 18px;
+    transition: 0.2s;
+    
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Set all odd list items to a different color (zebra-stripes) */
+  ul li:nth-child(odd) {
+    background: #eee;
+  }
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #ddd;
+  }
+
+  label {
+    word-break: break-all;
+    padding: 15px 60px 15px 15px;
+  }
+
+  .delete-todo {
+      float: right;
+  }
+
+  label::first-letter {
+    text-transform: uppercase;
+  }
+
+  .todo-done {
+    color: green;
+    text-decoration: line-through;
+  }
+
+  .todo-edit {
+    text-decoration: underline;
+    color: blue;
+    float: right;
+    margin-right: 15px;
+  }
+
+
+
+
+  
