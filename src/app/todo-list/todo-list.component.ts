@@ -27,7 +27,7 @@ export class TodoListComponent implements OnInit, OnDestroy {
           .pop() || {};
           Object.assign(updateTodo, todo);
         }
-        localStorage.setItem('todos', JSON.stringify(this.todos)); 
+        this.setTodos();
       }
     });
     window.onbeforeunload = () => this.ngOnDestroy();
@@ -45,11 +45,13 @@ export class TodoListComponent implements OnInit, OnDestroy {
       .filter(todo => todo.id === id)
       .pop();
     updatedTodo.complete = !updatedTodo.complete;
+    this.setTodos();
   }
 
   removeTodo(id) {
     this.todos = this.todos
       .filter(todo => todo.id !== id);
+    this.setTodos();
   }
 
   editTodo(todo) {
@@ -57,5 +59,8 @@ export class TodoListComponent implements OnInit, OnDestroy {
     this.todoService.editTodo(todo);
   }
 
+  setTodos() {
+    localStorage.setItem('todos', JSON.stringify(this.todos)); 
+  }
 
 }
